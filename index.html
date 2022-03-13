@@ -6,10 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PWA test</title>
   <link rel="manifest" href="manifest.json" />
-</head>
+  <meta name="theme-color" content="#4dbaa8">
+
+
+  <script>
+   if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+    })
+}
+  </script>
+
 <body>
   <h1>This is PWA!</h1>
-  <p>Some info..</p>
-  <p>Some info 2</p>
+  <p>Some info.. iugugi</p>
 </body>
 </html>
